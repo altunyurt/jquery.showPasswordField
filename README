@@ -1,7 +1,7 @@
 jQuery.showPasswordField 
 -------------------------
 
-jQuery plugin tat displays the value in password field. 
+jQuery plugin that displays the password field value in cleartext. 
 For now it just has one option 
 
   type: 'checkbox' or type: 'hover'
