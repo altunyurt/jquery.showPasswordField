@@ -9,8 +9,8 @@ default type is checkbox.
 
 Usage: 
    $(password_field_descriptor).showPasswordField()
-   $(password_field_descriptor).showPasswordField({option:'hover'})
-   $(password_field_descriptor).showPasswordField({option:'checkbox'})
+   $(password_field_descriptor).showPasswordField({type:'hover'})
+   $(password_field_descriptor).showPasswordField({type:'checkbox'})
 
 If type is hover, value in password field is displayed in cleartext when user hovers the 
 password field with mouse.
