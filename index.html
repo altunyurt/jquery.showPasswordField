@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Show password demo</title>
+<script type="text/javascript" src="jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="jquery.showPasswordField.js"></script>
+<script type="text/javascript">
+$(function(){
+        $("#password").showPasswordField({type:'hover'});
+        $("#password2").showPasswordField({type:'checkbox'});
+});
+</script>
+</head>
+
+<body>
+<form id="showPasswordDemo" action="#" method="post">
+	<fieldset>
+    	<legend>Show password demo</legend>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="test" size="30" maxlength="30" />
+    </fieldset>
+</form>
+
+
+<form id="showPasswordDemo2" action="#" method="post">
+	<fieldset>
+    	<legend>Show password demo</legend>
+        <label for="password2">Password</label>
+        <input type="password" id="password2" name="password2" class="test" size="20" maxlength="30" style="background-color: blue;" />
+    </fieldset>
+</form>
+
+</body>
+</html>
+
