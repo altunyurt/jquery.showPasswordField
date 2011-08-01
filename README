@@ -2,15 +2,19 @@ jQuery.showPasswordField
 -------------------------
 
 jQuery plugin that displays the password field value in cleartext. 
-For now it just has one option 
+For now it just has two options
 
-  type: 'checkbox' or type: 'hover'
+  type: 'checkbox' or 'hover'
+  text: 'text to display next to password field'
+
 default type is checkbox.
 
 Usage: 
    $(password_field_descriptor).showPasswordField()
    $(password_field_descriptor).showPasswordField({type:'hover'})
    $(password_field_descriptor).showPasswordField({type:'checkbox'})
+   $("input[type=password]").showPasswordField({option:'hover', text:'Hover the password field to
+   see it in clear text'});
 
 If type is hover, value in password field is displayed in cleartext when user hovers the 
 password field with mouse.

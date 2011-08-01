@@ -9,6 +9,8 @@
 $(function(){
         $("#password").showPasswordField({type:'hover'});
         $("#password2").showPasswordField({type:'checkbox'});
+        $("#password3").showPasswordField({type:'hover', text:'hover over the password field to see it in clear text'});
+        $("#password4").showPasswordField({type:'checkbox', text:'click to see password in clear text'});
 });
 </script>
 </head>
@@ -28,6 +30,23 @@ $(function(){
     	<legend>Show password demo</legend>
         <label for="password2">Password</label>
         <input type="password" id="password2" name="password2" class="test" size="20" maxlength="30" style="background-color: blue;" />
+    </fieldset>
+</form>
+
+<form id="showPasswordDemo3" action="#" method="post">
+	<fieldset>
+    	<legend>Show password demo</legend>
+        <label for="password3">Password</label>
+        <input type="password" id="password3" name="password3" class="test" size="30" maxlength="30" />
+    </fieldset>
+</form>
+
+
+<form id="showPasswordDemo4" action="#" method="post">
+	<fieldset>
+    	<legend>Show password demo</legend>
+        <label for="password4">Password</label>
+        <input type="password" id="password4" name="password4" class="test" size="20" maxlength="30" style="background-color: blue;" />
     </fieldset>
 </form>
 

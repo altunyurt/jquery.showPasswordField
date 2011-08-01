@@ -21,21 +21,24 @@
  *  Checkbox behaves as before. Hover displays the cleartext value when password 
  *  field is hovered.
  *
- *  Removed arbitraryly used jQuery calls and replaced with relevant object names.
+ *  Removed excessively used jQuery calls and replaced with relevant object names.
  *
- * Default value is checkbox
+ *  Default value is checkbox
  *
  *  @example $("input#password").showPasswordField();
  *  @example $("input[type=password]").showPasswordField({option:'checkbox'});
- *  @example $("input[type=password]").showPasswordField({option:'hover'});
+ *  @example $("input[type=password]").showPasswordField({option:'hover', text:'Hover the password field to
+ *  see it in clear text'});
  *
  *
  */
 jQuery.fn.showPasswordField = function(options) {
     var _options =  {
-        type: 'checkbox' // checkbox or hover
+        type: 'checkbox', 
+        text: 'Show password'
     };
-    if (_options)
+
+    if (options)
         $.extend(_options, options);
 
     return this.each(function () {
@@ -53,12 +56,12 @@ jQuery.fn.showPasswordField = function(options) {
             if(_options.type == 'checkbox') {
             
                 // Markup for showPassword checkbox
-                var showPasswordField = $("<input type=\"checkbox\" id=\""+showPasswordFieldName+"\" /><label for=\""+showPasswordFieldName+"\">Show password</label>");
+                var showPasswordField = $('<input type="checkbox" id="'+showPasswordFieldName+'" /><label for="'+showPasswordFieldName+'">'+ _options.text +'</label>');
         
                 // Insert the text password field and showPassword field and label
                 altPasswordField.after(showPasswordField);
             }  else {
-                altPasswordField.after('<label for="' + showPasswordFieldName +'">Hover password field to see it in cleartext </label>')
+                altPasswordField.after('<label for="' + showPasswordFieldName +'">' + _options.text +'</label>')
             }
             
             // Clone attributes from this to #altPassword. Do not include "id" and "type".
