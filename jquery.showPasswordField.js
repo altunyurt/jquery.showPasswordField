@@ -56,12 +56,12 @@ jQuery.fn.showPasswordField = function(options) {
             if(_options.type == 'checkbox') {
             
                 // Markup for showPassword checkbox
-                var showPasswordField = $('<input type="checkbox" id="'+showPasswordFieldName+'" /><label for="'+showPasswordFieldName+'">'+ _options.text +'</label>');
+                var showPasswordField = $('<input type="checkbox" id="'+showPasswordFieldName+'" />'+ _options.text);
         
                 // Insert the text password field and showPassword field and label
                 altPasswordField.after(showPasswordField);
             }  else {
-                altPasswordField.after('<label for="' + showPasswordFieldName +'">' + _options.text +'</label>')
+                altPasswordField.after(_options.text);
             }
             
             // Clone attributes from this to #altPassword. Do not include "id" and "type".
